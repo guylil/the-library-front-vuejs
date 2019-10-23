@@ -1,12 +1,10 @@
 <template>
   <v-container>
     <v-layout text-center wrap>
-      <v-flex xs12> </v-flex>
+      <v-flex xs12>this is browse </v-flex>
 
       <v-flex mb-4>
-        <h1 class="display-1 mb-2">
-          Welcome to The Library
-        </h1>
+        <h1 class="display-1 mb-2"></h1>
       </v-flex>
 
       <v-flex mb-5 xs12>
