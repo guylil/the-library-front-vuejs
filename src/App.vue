@@ -6,16 +6,16 @@
       <v-toolbar-title class="headline text-uppercase">
         <span class="font-weight-light">The Library</span>
       </v-toolbar-title>
-      <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>|
-        <router-link to="/browse">the library</router-link>
-      </div>
       <v-spacer></v-spacer>
       <v-btn icon><v-icon>mdi-github-circle</v-icon></v-btn>
       <v-btn icon href="https://www.linkedin.com/in/guy-lilian/"
         ><v-icon>mdi-linkedin-box</v-icon></v-btn
       >
+      <div id="nav">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link>|
+        <router-link to="/browse">browse</router-link>
+      </div>
     </v-app-bar>
 
     <v-content>

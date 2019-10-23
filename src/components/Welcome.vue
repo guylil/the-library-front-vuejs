@@ -5,7 +5,7 @@
 
       <v-flex mb-4>
         <h1 class="display-1 mb-2">
-          Welcome to The Library!!
+          Welcome to The Library
         </h1>
       </v-flex>
 
