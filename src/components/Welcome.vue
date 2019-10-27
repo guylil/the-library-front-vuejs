@@ -38,6 +38,12 @@ export default {
         href: "return",
         color: "blue",
         icon: "mdi-backup-restore"
+      },
+      {
+        txt: "My books",
+        href: "personal-page",
+        color: "teal",
+        icon: ""
       }
     ]
   })

@@ -1,9 +1,12 @@
 <template>
   <v-app>
     <v-app-bar app>
-      <span><v-icon>mdi-book-open-page-variant</v-icon></span>
+      <v-icon>mdi-book-open-page-variant</v-icon>
       <v-spacer></v-spacer>
-      <v-toolbar-title class="headline text-uppercase">
+      <v-toolbar-title
+        class="headline text-uppercase"
+        @click="$router.push('/')"
+      >
         <span class="font-weight-light">The Library</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
