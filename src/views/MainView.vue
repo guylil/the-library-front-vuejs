@@ -1,7 +1,7 @@
 <template>
   <div class="welcome">
     <Welcome />
-    <BooksList :books="[1, 2, 3, 4, 5]" />
+    <BooksList :books="books" />
   </div>
 </template>
 
@@ -9,12 +9,15 @@
 // @ is an alias to /src
 import Welcome from "@/components/Welcome";
 import BooksList from "@/components/BooksList";
+import { mapState } from "vuex";
 
 export default {
   name: "main-view",
   components: {
     Welcome,
     BooksList
-  }
+  },
+  data: () => ({}),
+  computed: mapState(["books"])
 };
 </script>
