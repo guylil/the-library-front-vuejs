@@ -7,18 +7,25 @@
             <v-list-item-group color="primary">
               <v-list-item v-for="(book, i) in books" :key="i">
                 <v-list-item-content>
-                  <v-list-item-title v-text="book.title"></v-list-item-title>
+                  <v-list-item-title>
+                    {{ book.title }}
+                  </v-list-item-title>
                 </v-list-item-content>
+                <span
+                  v-if="book.taken[book.taken.length - 1]"
+                  :class="{
+                    'red--text': !due(book.taken[book.taken.length - 1])
+                  }"
+                >
+                  due: {{ due(book.taken[book.taken.length - 1]) }} days
+                </span>
                 <v-list-item-icon>
-                  <v-icon>mdi-more</v-icon>
+                  <v-icon>mdi-dots-vertical</v-icon>
                 </v-list-item-icon>
               </v-list-item>
             </v-list-item-group>
           </v-list>
         </v-card>
-        <ul>
-          <li v-for="(book, i) in books" :key="i">{{ book }}</li>
-        </ul>
       </v-flex>
     </v-layout>
   </v-container>
@@ -29,6 +36,9 @@ export default {
   props: {
     books: Array
   },
-  data: () => ({})
+  data: () => ({}),
+  methods: {
+    due: taken => Math.round((taken - Date.now()) / (1000 * 60 * 60 * 24))
+  }
 };
 </script>

@@ -11,14 +11,14 @@ export default new Vuex.Store({
         title: "a book",
         published: "date",
         available: true,
-        taken: [],
+        taken: [1572527020007, 1572527000027, 1572527027000],
         returned: []
       },
       {
         title: "a book1",
         published: "date",
         available: true,
-        taken: [],
+        taken: [1572195397000],
         returned: []
       },
       {
@@ -29,11 +29,16 @@ export default new Vuex.Store({
         returned: []
       }
     ],
+    showBooksList: false,
     booksInTheCart: [],
     borrowedBooks: [],
     booksAlreadyRead: []
   },
-  mutations: {},
+  mutations: {
+    toggleShowBooks(state) {
+      state.showBooksList = !state.showBooksList;
+    }
+  },
   actions: {},
   modules: {}
 });
