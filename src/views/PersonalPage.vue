@@ -1,6 +1,6 @@
 <template>
   <div class="Personal">
-    My books
+    <div class="px-3 pt-3">My books</div>
     <BooksList :books="books" />
   </div>
 </template>

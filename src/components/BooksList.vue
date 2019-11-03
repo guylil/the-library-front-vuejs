@@ -12,13 +12,14 @@
                   </v-list-item-title>
                 </v-list-item-content>
                 <span
-                  v-if="book.taken[book.taken.length - 1]"
+                  v-if="due(book.taken[book.taken.length - 1]) > -1"
                   :class="{
                     'red--text': !due(book.taken[book.taken.length - 1])
                   }"
                 >
                   due: {{ due(book.taken[book.taken.length - 1]) }} days
                 </span>
+                <span v-else>Overdue</span>
                 <v-list-item-icon>
                   <v-icon>mdi-dots-vertical</v-icon>
                 </v-list-item-icon>
